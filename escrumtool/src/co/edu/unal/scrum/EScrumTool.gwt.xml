@@ -13,6 +13,8 @@
 	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 
 	<!-- Other module inherits                                      -->
+		<inherits name ='com.bramosystems.oss.player.core.Core'/>
+<inherits name ='com.bramosystems.oss.player.youtube.YouTube'/>
 	<inherits name='com.gwtplatform.mvp.Mvp'/>
 	<inherits name='com.gwtplatform.dispatch.Dispatch'/>
 <inherits name='com.extjs.gxt.ui.GXT' />
