@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+@sprite .iconAcceptClass {
+	gwt-image: 'iconAccept';
+}
+
+@sprite .iconPencilClass {
+	gwt-image: 'iconPencil';
+}
