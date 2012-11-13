@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="503" started-at="2012-11-13T07:24:35Z" finished-at="2012-11-13T07:24:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="503" started-at="2012-11-13T07:24:35Z" finished-at="2012-11-13T07:24:36Z">
+      <class name="pruebas.NewTest">
+        <test-method status="PASS" signature="setu()[pri:0, instance:pruebas.NewTest@13b33a0e]" name="setu" is-config="true" duration-ms="30" started-at="2012-11-13T02:24:35Z" finished-at="2012-11-13T02:24:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setu -->
+        <test-method status="PASS" signature="f()[pri:0, instance:pruebas.NewTest@13b33a0e]" name="f" duration-ms="464" started-at="2012-11-13T02:24:35Z" finished-at="2012-11-13T02:24:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="teard()[pri:0, instance:pruebas.NewTest@13b33a0e]" name="teard" is-config="true" duration-ms="0" started-at="2012-11-13T02:24:36Z" finished-at="2012-11-13T02:24:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teard -->
+      </class> <!-- pruebas.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

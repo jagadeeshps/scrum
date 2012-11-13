@@ -1,0 +1,16 @@
+function nF(){}
+function Tg(a){this.a=a}
+function Pd(a,b){a.Tc(b)}
+function Rd(a,b){a.Tc(b)}
+function Ec(a,b){xb.call(this,a,b)}
+function zd(){return new Vc}
+function Cg(a){Uc(myb(a.a.j,2));mb(a,a.a)}
+function Sg(a){!!a.a.o&&Cg(myb(a.a.o,12))}
+function Og(){Og=xkc;!kF&&(kF=new nF);mF(kF,Pzb)}
+function Dg(a,b,c){xb.call(this,a,b);this.a=c;myb(this.j,11).nd(this)}
+function Uc(a){a.f.rh(lmc);l5(a.d,lmc);l5(a.a,lmc);l5(a.g,null);l5(a.i,null)}
+function mF(a,b){var c;c=b.e;!a.a&&(a.a=new pD);kD(a.a,c)==null;return uyb(kD(a.a,c))}
+function fe(a){var b,c;!a.s&&(a.s=(b=new Dg((!a.B&&(a.B=new krb),a.B),(!a.t&&(a.t=new Pg(new Xh)),a.t),(!a.r&&(a.r=new Hg),c=new Ec((!a.B&&(a.B=new krb),a.B),zd(!a.B&&(a.B=new krb))),Pd(c,(!a.E&&(a.E=new N5b),a.E)),c)),Rd(b,(!a.E&&(a.E=new N5b),a.E)),b));return a.s}
+function Pg(){Og();this.e=new bS;Hs(this.e,qzb.e);tR(this.e,new rcb);this.d=new FS;this.d.Sg(uqc);this.b=new xW('Add Story',wZb(($h(),Wh(),Mh)));fW(this.b,new Tg(this));tR(this.d,new hdb(0));this.c=new xW(Cqc,wZb((ai(),Oh)));this.a=new i3;aR(this.a,this.b);aR(this.a,new rib);aR(this.a,this.c);ES(this.d,this.a);UR(this.e,this.d,new Ucb((Uw(),Pw)))}
+function Vc(){this.k=new EX;Hs(this.k,Fyb.e);vX(this.k,'user History editor');tR(this.k,new ndb);Ot(this.k,347,-1);Ot(this.k,-1,599);this.k.F=true;this.e=new Q8;this.e.pb=false;this.e.$=false;As(this.e,false);BS(this.e,(Bw(),yw));this.f=new n5;t4(this.f,'Tittle');this.f.D=false;this.f.G=4;this.d=new Obb;Os(this.d,'As a [user role] I want to [goal] so I can [reason].  ');this.d.D=false;t4(this.d,yqc);this.a=new Obb;Os(this.a,'Scenario 1: Title\r\nGiven [context]\r\nAnd [some more context]\u2026\r\nWhen [event]\r\nThen [outcome]\r\nAnd [another outcome]\u2026');t4(this.a,'Aceptance criteria');this.j=new vW('Submit');this.c=new vW(zqc);TR(this.e,this.f);TR(this.e,this.d);Pt(this.d,Aqc,Bqc);TR(this.e,this.a);Pt(this.a,Aqc,Bqc);this.g=new gbb;this.g.b=false;this.g.a=false;this.g.J=true;TR(this.e,this.g);t4(this.g,'Priority');this.i=new gbb;this.i.b=false;t4(this.i,'Story Points');TR(this.e,this.i);lS(this.e,this.j);lS(this.e,this.c);this.b=new y8(this.e);v8(this.b,this.j);TR(this.k,this.e);Pt(this.e,vmc,'569px')}
+var Bqc='200',Aqc='370';mRb(19,7,Bkc,Ec);_.Uc=function Fc(){};mRb(20,21,{2:1,221:1},Vc);_.ed=function Wc(){return this.k};_.a=null;_.b=null;_.c=null;_.d=null;_.e=null;_.f=null;_.g=null;_.i=null;_.j=null;_.k=null;mRb(35,1,Jkc);_.sd=function ye(){W6b(this.b,fe(this.a.a))};mRb(62,6,{12:1,172:1,222:1,223:1},Dg);_.Uc=function Eg(){};_.$c=function Fg(){qb(this,new n8b((rc(),lc),this))};_.a=null;mRb(65,49,{11:1},Pg);_.ed=function Qg(){return this.e};_.a=null;_.b=null;_.c=null;_.d=null;_.e=null;mRb(66,51,Ikc,Tg);_.td=function Ug(a){Sg(this,myb(a,59))};_.a=null;mRb(253,1,{});var kF=null;mRb(254,253,{},nF);_.a=null;var ozb=m9b(Tpc,'ProductBackLogPresenter',62),Pzb=m9b(Qpc,'Product',null),qzb=m9b(Tpc,'ProductBackLogView',65),pzb=m9b(Tpc,'ProductBackLogView$1',66),Eyb=m9b(ypc,'UserHistoryPresenter',19),Fyb=m9b(ypc,'UserHistoryView',20),CBb=m9b(iqc,'BeanModelLookup',253),BBb=m9b(iqc,'BeanModelLookupImpl',254);hmc(Ojb)(2);
