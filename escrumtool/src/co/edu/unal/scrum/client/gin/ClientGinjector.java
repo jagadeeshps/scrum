@@ -1,12 +1,12 @@
 package co.edu.unal.scrum.client.gin;
 
-import co.edu.unal.scrum.client.HomePresenter;
 import co.edu.unal.scrum.client.InicioPresenter;
 import co.edu.unal.scrum.client.LayoutPresenter;
-import co.edu.unal.scrum.client.WallPresenter;
+import co.edu.unal.scrum.client.home.HomePresenter;
 import co.edu.unal.scrum.client.place.LoggedInGatekeeper;
 import co.edu.unal.scrum.client.productbacklog.ProductBackLogPresenter;
 import co.edu.unal.scrum.client.statics.StaticsPresenter;
+import co.edu.unal.scrum.client.wall.WallPresenter;
 import co.edu.unal.scrum.shared.model.LoginInfo;
 
 import com.google.gwt.event.shared.EventBus;

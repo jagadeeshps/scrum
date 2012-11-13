@@ -29,6 +29,6 @@
 	<define-configuration-property name='gin.ginjector' is-multi-valued='false' />
 	<set-configuration-property name='gin.ginjector' value='co.edu.unal.scrum.client.gin.ClientGinjector' />
 	<inherits name="com.google.gwt.i18n.I18N"/>
-	<extend-property name="locale" values="en,es"/>
+	<extend-property name="locale" values="default"/>
 
 </module>

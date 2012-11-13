@@ -6,10 +6,10 @@ import co.edu.unal.scrum.client.LayoutPresenter;
 import co.edu.unal.scrum.client.LayoutView;
 import co.edu.unal.scrum.client.UserHistoryPresenter;
 import co.edu.unal.scrum.client.UserHistoryView;
-import co.edu.unal.scrum.client.WallPresenter;
-import co.edu.unal.scrum.client.WallView;
 import co.edu.unal.scrum.client.header.HeaderPresenter;
 import co.edu.unal.scrum.client.header.HeaderView;
+import co.edu.unal.scrum.client.home.HomePresenter;
+import co.edu.unal.scrum.client.home.HomeView;
 import co.edu.unal.scrum.client.menu.MenuPresenter;
 import co.edu.unal.scrum.client.menu.MenuView;
 import co.edu.unal.scrum.client.place.ClientPlaceManager;
@@ -24,14 +24,14 @@ import co.edu.unal.scrum.client.projects.widgets.ProjectPresenter;
 import co.edu.unal.scrum.client.projects.widgets.ProjectView;
 import co.edu.unal.scrum.client.statics.StaticsPresenter;
 import co.edu.unal.scrum.client.statics.StaticsView;
+import co.edu.unal.scrum.client.wall.WallPresenter;
+import co.edu.unal.scrum.client.wall.WallView;
 import co.edu.unal.scrum.shared.model.LoginInfo;
 
 import com.google.inject.Singleton;
 import com.gwtplatform.dispatch.shared.SecurityCookie;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
-import co.edu.unal.scrum.client.HomePresenter;
-import co.edu.unal.scrum.client.HomeView;
 import co.edu.unal.scrum.client.projects.TeamEditorPresenter;
 import co.edu.unal.scrum.client.projects.TeamEditorView;
 
@@ -76,7 +76,7 @@ public class ClientModule extends AbstractPresenterModule {
 		bindPresenter(WallPresenter.class, WallPresenter.MyView.class,
 				WallView.class, WallPresenter.MyProxy.class);
 
-		bindSingletonPresenterWidget(ProjectPresenter.class,
+		bindPresenterWidget(ProjectPresenter.class,
 				ProjectPresenter.MyView.class, ProjectView.class);
 
 		bindPresenter(HomePresenter.class, HomePresenter.MyView.class,

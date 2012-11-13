@@ -5,10 +5,12 @@ import java.util.Date;
 import java.util.List;
 
 import co.edu.unal.scrum.shared.model.ProjectStatus;
+import co.edu.unal.scrum.shared.model.Rol;
 
 import com.google.appengine.api.datastore.Text;
 import com.google.code.twig.annotation.Child;
 import com.google.code.twig.annotation.Embed;
+import com.google.code.twig.annotation.Embedded;
 import com.google.code.twig.annotation.Entity;
 import com.google.code.twig.annotation.Id;
 import com.google.code.twig.annotation.Index;
@@ -24,16 +26,25 @@ public class Project {
 	private String description;
 	private Date startDate;
 	private Date endDate;
-	private ProjectStatus state=ProjectStatus.NEW;
+	private ProjectStatus state = ProjectStatus.NEW;
 	@Child
 	private ArrayList<Product> products;
 	@Child
 	private ArrayList<SprintBacklog> sprints;
-	@Embed
-	@Type(value = List.class, parameters = StakeHolder.class)
-	StakeHolder[] scrumTeam;
+	@Embedded
+	ArrayList<StakeHolder> scrumTeam = new ArrayList<StakeHolder>();;
 
 	public Project() {
+	}
+
+	public Project(String name, String description, Date startDate,
+			Date endDate, String email) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		scrumTeam.add(new StakeHolder(this, email, Rol.SCRUM_MASTER));
 	}
 
 	/**
@@ -156,18 +167,11 @@ public class Project {
 		this.sprints = sprints;
 	}
 
-	/**
-	 * @return the scrumTeam
-	 */
-	public StakeHolder[] getScrumTeam() {
+	public ArrayList<StakeHolder> getScrumTeam() {
 		return scrumTeam;
 	}
 
-	/**
-	 * @param scrumTeam
-	 *            the scrumTeam to set
-	 */
-	public void setScrumTeam(StakeHolder[] scrumTeam) {
+	public void setScrumTeam(ArrayList<StakeHolder> scrumTeam) {
 		this.scrumTeam = scrumTeam;
 	}
 

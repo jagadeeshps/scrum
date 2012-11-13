@@ -1,11 +1,19 @@
 package co.edu.unal.scrum.server.handlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.unal.scrum.server.dao.UserDetailsDao;
+import co.edu.unal.scrum.server.guice.ObjectDatastoreProvider;
+import co.edu.unal.scrum.server.model.ProjectUser;
 import co.edu.unal.scrum.server.model.UserDetail;
 import co.edu.unal.scrum.shared.actions.LoginAction;
 import co.edu.unal.scrum.shared.actions.LoginActionResult;
 import co.edu.unal.scrum.shared.model.LoginInfo;
+import co.edu.unal.scrum.shared.model.Project;
+import co.edu.unal.scrum.shared.model.ProjectBuilder;
 
+import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
@@ -24,6 +32,9 @@ public class LoginActionActionHandler implements
 
 	@Inject
 	UserDetailsDao dao;
+	@Inject
+	ObjectDatastoreProvider provider;
+	private List<ProjectUser> r;
 
 	@Override
 	public LoginActionResult execute(LoginAction action,
@@ -52,6 +63,24 @@ public class LoginActionActionHandler implements
 			if (u == null) {
 				UserDetail userP = new UserDetail("", "", user.getEmail());
 				dao.store(userP);
+			} else {
+				ObjectDatastore ds = provider.get();
+				r = ds.find()
+						.type(ProjectUser.class)
+						.addFilter("emailUser", FilterOperator.EQUAL,
+								user.getEmail()).returnAll().now();
+				ArrayList<Project> project = new ArrayList<Project>();
+				for (ProjectUser pu : r) {
+					co.edu.unal.scrum.server.model.Project p = pu.getP();
+					Project pro = ProjectBuilder.project()
+							.withDateEnd(p.getEndDate())
+							.withDateStart(p.getStartDate())
+							.withDescription(p.getDescription())
+							.withIdProject(p.getId()).withName(p.getName())
+							.withStatus(p.getState().toString()).build();
+					project.add(pro);
+				}
+				userLoginInfo.setProjects(project);
 			}
 
 		} else {

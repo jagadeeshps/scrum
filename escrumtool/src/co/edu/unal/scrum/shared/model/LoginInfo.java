@@ -1,6 +1,7 @@
 package co.edu.unal.scrum.shared.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class LoginInfo implements Serializable {
 
@@ -10,6 +11,7 @@ public class LoginInfo implements Serializable {
 	private boolean administrator = false;
 	private String logoutUrl = "";
 	private String loginUrl = "";
+	private ArrayList<Project> projects;
 
 	public void setLoginUrl(String loginUrl) {
 		this.loginUrl = loginUrl;
@@ -60,12 +62,21 @@ public class LoginInfo implements Serializable {
 		return email;
 	}
 
+	public ArrayList<Project> getProjects() {
+		return projects;
+	}
+
+	public void setProjects(ArrayList<Project> projects) {
+		this.projects = projects;
+	}
+
 	public void reset() {
 		setLoggedIn(false);
 		setAdministrator(false);
 		setLogoutUrl(null);
 		setEmail(null);
 		setLoginUrl(null);
+		setProjects(null);
 	}
 
 	public void initialize(LoginInfo loginInfo) {
@@ -74,6 +85,7 @@ public class LoginInfo implements Serializable {
 			setAdministrator(loginInfo.isAdministrator());
 			setLogoutUrl(loginInfo.getLogoutUrl());
 			setEmail(loginInfo.getEmail());
+			setProjects(loginInfo.projects);
 		} else {
 			reset();
 			setLoginUrl(loginInfo.getLoginUrl());
@@ -82,7 +94,8 @@ public class LoginInfo implements Serializable {
 
 	@Override
 	public String toString() {
-		return isLoggedIn() ? "Logged in: " + getEmail() : "Not logged in yet.";
+		return isLoggedIn() ? "User " + getEmail() + "Logged in: "
+				: "User Not logged in yet.";
 	}
 
 }

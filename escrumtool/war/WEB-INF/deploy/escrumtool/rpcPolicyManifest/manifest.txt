@@ -1,2 +1,3 @@
 # Module escrumtool
 # RPC service class, partial path of RPC policy file
+com.gwtplatform.dispatch.shared.DispatchService, F87007CE0AD4313D7ABC352DE27FC69C.gwt.rpc
